@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/andy-common/andy-common.iml" filepath="$PROJECT_DIR$/andy-common/andy-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/andy-dao/andy-dao.iml" filepath="$PROJECT_DIR$/andy-dao/andy-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/andy-manager-web/andy-manager-web.iml" filepath="$PROJECT_DIR$/andy-manager-web/andy-manager-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/andy-parent.iml" filepath="$PROJECT_DIR$/andy-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/andy-pojo/andy-pojo.iml" filepath="$PROJECT_DIR$/andy-pojo/andy-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/andy-sellergoods-interface/andy-sellergoods-interface.iml" filepath="$PROJECT_DIR$/andy-sellergoods-interface/andy-sellergoods-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/andy-sellergoods-service/andy-sellergoods-service.iml" filepath="$PROJECT_DIR$/andy-sellergoods-service/andy-sellergoods-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/andy-shop-web/andy-shop-web.iml" filepath="$PROJECT_DIR$/andy-shop-web/andy-shop-web.iml" />
+    </modules>
+  </component>
+</project>

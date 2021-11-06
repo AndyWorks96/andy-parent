@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+	<!--页面不登录也可以访问  -->
+	<http pattern="/*.html" security="none"></http>
+	<http pattern="/css/**" security="none"></http>
+	<http pattern="/img/**" security="none"></http>
+	<http pattern="/js/**" security="none"></http>
+	<http pattern="/plugins/**" security="none"></http>
+	
+	<!--页面拦截规则  use-expressions:是否启动SPEL表达式 默认是true-->
+	<http use-expressions="false">
+		<!--当前用户必须有role_user的角色才可以访问根目录及所属子目录的所有资源 hasRole('ROLE_USER')  -->
+		<intercept-url pattern="/**" access="ROLE_ADMIN"/>
+		<!--开启表单登录功能  -->
+		<form-login username-parameter="user" login-page="/login.html" default-target-url="/admin/index.html" authentication-failure-url="/login.html"  always-use-default-target="true"/>
+		<csrf disabled="true"/>
+		<headers>
+			<frame-options policy="SAMEORIGIN"/>
+		</headers>
+		<!--logout-success-url=""  http://localhost:9101/login.html?logout-->
+		<logout logout-url="/logout001"/>
+	</http>	
+	
+	<!--认证管理器  -->
+	<authentication-manager>
+		<!--认证的提供者  -->
+		<authentication-provider>
+			<user-service>
+														<!--所属角色 可以有很多用户  -->
+				<user name="admin" password="123456" authorities="ROLE_ADMIN"/>
+				<user name="lee" password="123456" authorities="ROLE_ADMIN"/>
+				<user name="andyworks" password="123456" authorities="ROLE_ADMIN"/>
+			</user-service>
+		</authentication-provider>
+	</authentication-manager>
+	
+	
+</beans:beans>

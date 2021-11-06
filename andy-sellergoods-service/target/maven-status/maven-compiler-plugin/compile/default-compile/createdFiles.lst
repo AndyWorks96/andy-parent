@@ -1,0 +1,9 @@
+com/andy/sellergoods/service/impl/SellerServiceImpl.class
+com/andy/sellergoods/service/impl/GoodsDescServiceImpl.class
+com/andy/sellergoods/service/impl/GoodsServiceImpl.class
+com/andy/sellergoods/service/impl/ItemServiceImpl.class
+com/andy/sellergoods/service/impl/BrandServiceImpl.class
+com/andy/sellergoods/service/impl/TypeTemplateServiceImpl.class
+com/andy/sellergoods/service/impl/ItemCatServiceImpl.class
+com/andy/sellergoods/service/impl/SpecificationOptionServiceImpl.class
+com/andy/sellergoods/service/impl/SpecificationServiceImpl.class
