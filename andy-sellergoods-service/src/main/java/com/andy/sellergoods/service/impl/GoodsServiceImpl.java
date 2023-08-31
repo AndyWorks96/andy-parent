@@ -14,6 +14,7 @@ import com.pinyougou.pojo.TbGoodsExample.Criteria;
 import com.pinyougou.pojogroup.Goods;
 
 import entity.PageResult;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * 服务实现层
@@ -21,6 +22,8 @@ import entity.PageResult;
  *
  */
 @Service
+@Transactional
+
 public class GoodsServiceImpl implements GoodsService {
 
 	@Autowired
@@ -56,6 +59,7 @@ public class GoodsServiceImpl implements GoodsService {
 	public void add(Goods goods) {
 		goods.getGoods().setAuditStatus("0");//设置未申请状态
 		goodsMapper.insert(goods.getGoods());
+//		int x = 1/0; //增加商品失败，后台代码中加入该语句报错。
 		System.out.println(goods.getGoods().getId());
 		goods.getGoodsDesc().setGoodsId(goods.getGoods().getId());//设置ID
 //		System.out.println(goods.getGoodsDesc().toString());
@@ -98,8 +102,8 @@ public class GoodsServiceImpl implements GoodsService {
 		
 		TbGoodsExample example=new TbGoodsExample();
 		Criteria criteria = example.createCriteria();
-		
-		if(goods!=null){			
+
+			if(goods!=null){
 						if(goods.getSellerId()!=null && goods.getSellerId().length()>0){
 				criteria.andSellerIdLike("%"+goods.getSellerId()+"%");
 			}
