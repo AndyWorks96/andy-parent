@@ -32,8 +32,8 @@
 	
 	<dubbo:application name="andy-manager-web" />
 	
-	<dubbo:registry address="zookeeper://192.168.1.138:2181"/>
-	
+<!--	<dubbo:registry address="zookeeper://192.168.1.248:2181"/>-->
+	<dubbo:registry address="zookeeper://192.168.215.42:2181"/>
 	<dubbo:annotation package="com.andy.manager.controller" />
 	<!-- <dubbo:reference interface="com.andy.sellergoods.service.BrandService" id="brandServiceImpl" timeout="7000" /> -->
 </beans>

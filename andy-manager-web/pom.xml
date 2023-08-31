@@ -95,6 +95,11 @@
 		<artifactId>andy-sellergoods-interface</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</dependency>
+	  <dependency>
+		  <groupId>com.andy</groupId>
+		  <artifactId>andy-content-interface</artifactId>
+		  <version>0.0.1-SNAPSHOT</version>
+	  </dependency>
 	<!--2020年10月9日添加  -->
 	<dependency>
 		<groupId>com.github.pagehelper</groupId>

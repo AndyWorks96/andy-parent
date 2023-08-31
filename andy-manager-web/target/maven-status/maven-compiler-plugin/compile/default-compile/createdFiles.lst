@@ -3,8 +3,11 @@ com/andy/manager/controller/ItemCatController.class
 com/andy/manager/controller/SpecificationOptionController.class
 com/andy/manager/controller/TypeTemplateController.class
 com/andy/manager/controller/SpecificationController.class
+com/andy/manager/controller/UploadController.class
 com/andy/manager/controller/loginController.class
 com/andy/manager/controller/GoodsDescController.class
+com/andy/manager/controller/ContentController.class
 com/andy/manager/controller/GoodsController.class
 com/andy/manager/controller/SellerController.class
 com/andy/manager/controller/ItemController.class
+com/andy/manager/controller/ContentCategoryController.class
