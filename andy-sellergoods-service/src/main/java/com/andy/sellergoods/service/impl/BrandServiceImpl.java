@@ -17,7 +17,7 @@ import com.pinyougou.pojo.TbBrandExample.Criteria;
 import entity.PageResult;
 @Service
 public class BrandServiceImpl implements BrandService {
-	//本地调用
+	//本地调用test
 	@Autowired
 	private TbBrandMapper brandMapper;
 	
