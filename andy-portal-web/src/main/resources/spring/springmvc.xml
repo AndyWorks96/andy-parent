@@ -39,6 +39,6 @@
 	<!-- 引用dubbo 服务 -->
 	<dubbo:application name="andy-portal-web" />
 	<dubbo:registry address="zookeeper://192.168.70.42:2181"/>
-	<dubbo:annotation package="com.andy.portal.controller" />
+	<dubbo:annotation package="cn.andy.portal.controller" />
 
 </beans>
