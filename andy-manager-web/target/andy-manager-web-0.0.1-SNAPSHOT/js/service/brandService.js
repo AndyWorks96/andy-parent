@@ -3,7 +3,7 @@
 			//模型变量绑定视图,剩余部分属于控制层代码,要拿结果response,
 			//和后端交互部分
 			this.findAll=function(){
-				return $http.get('..brand/findAll.do');
+				return $http.get('../brand/findAll.do');
 			}
 			this.findPage=function(page,sizess){
 				return $http.get('../brand/findPage.do?page='+page+'&size='+sizess);

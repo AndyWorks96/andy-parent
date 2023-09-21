@@ -47,7 +47,7 @@ app.controller('baseController',function($scope){
 	$scope.searchObjectByKey=function(list,key,keyValue){
 		
 		for(var i=0;i<list.length;i++){
-			
+			//key=attributeName,keyValue=机身内存
 			if(list[i][key]==keyValue)
 				return list[i];
 		}
@@ -60,7 +60,7 @@ app.controller('baseController',function($scope){
 	
 	
 	
-	
+
 	
 	
 	

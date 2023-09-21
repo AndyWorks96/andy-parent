@@ -1,5 +1,5 @@
  //contentCategory控制层 
-app.controller('contentCategoryController' ,function($scope,$controller   ,contentCategoryService){	
+app.controller('contentCategoryController' ,function($scope,$controller,contentCategoryService){
 	
 	$controller('baseController',{$scope:$scope});//继承
 	
@@ -8,6 +8,7 @@ app.controller('contentCategoryController' ,function($scope,$controller   ,conte
 		contentCategoryService.findAll().success(
 			function(response){
 				$scope.list=response;
+				console.log('响应数据：' ,response.data);
 			}			
 		);
 	}    

@@ -7,20 +7,26 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="andy-shop-web" />
+        <module name="andy-content-service" />
         <module name="andy-common" />
+        <module name="andy-portal-web" />
         <module name="andy-dao" />
         <module name="andy-manager-web" />
         <module name="andy-sellergoods-service" />
         <module name="andy-sellergoods-interface" />
         <module name="andy-pojo" />
+        <module name="andy-content-interface" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="andy-common" target="1.8" />
+      <module name="andy-content-interface" target="1.8" />
+      <module name="andy-content-service" target="1.8" />
       <module name="andy-dao" target="1.8" />
       <module name="andy-manager-web" target="1.8" />
       <module name="andy-parent" target="1.8" />
       <module name="andy-pojo" target="1.8" />
+      <module name="andy-portal-web" target="1.8" />
       <module name="andy-sellergoods-interface" target="1.8" />
       <module name="andy-sellergoods-service" target="1.8" />
       <module name="andy-shop-web" target="1.8" />

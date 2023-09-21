@@ -2,6 +2,7 @@ package com.andy.sellergoods.service.impl;
 import java.util.List;
 import java.util.Map;
 
+import com.mysql.cj.xdevapi.JsonArray;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.alibaba.fastjson.JSON;
@@ -121,14 +122,17 @@ public class TypeTemplateServiceImpl implements TypeTemplateService {
 		private TbSpecificationOptionMapper specificationOptionMapper;
 		
 		@Override
-		public List<Map> findSpecList(long id) {
+		/*public List<Map> findSpecList(long id) {
 			
 			//首先根据模板id查询规格 
 			//查询模板
 			TbTypeTemplate tbTypeTemplate = typeTemplateMapper.selectByPrimaryKey(id);
-//			System.out.println(tbTypeTemplate);
+			System.out.println(tbTypeTemplate);
 			//将查询出的内容存入map集合中
 			List<Map> list = JSON.parseArray(tbTypeTemplate.getSpecIds(), Map.class);
+			System.out.println("****************");
+			System.out.println(list);
+			System.out.println("****************");
 			for(Map map:list){
 				//查询规格选项列表
 				System.out.println(map.toString());
@@ -137,14 +141,25 @@ public class TypeTemplateServiceImpl implements TypeTemplateService {
 //				criteria.andIdEqualTo(new Long( (Integer)map.get("id") ) );
 				criteria.andSpecIdEqualTo(new Long( (Integer)map.get("id") ) );
 				List<TbSpecificationOption> options = specificationOptionMapper.selectByExample(example);
-				
 				map.put("options", options);
 				System.out.println(map.toString());
 			}
-			
-			
-			
+
+			return list;
+		}*/
+		public List<Map> findSpecList(long id){
+			//创造查询模版
+			TbTypeTemplate tbTypeTemplate = typeTemplateMapper.selectByPrimaryKey(id);
+			System.out.println(tbTypeTemplate.getSpecIds());
+			List<Map> list = JSON.parseArray(tbTypeTemplate.getSpecIds(), Map.class);
+			for (Map map: list){
+				System.out.println(map.toString());
+				TbSpecificationOptionExample example = new TbSpecificationOptionExample();
+				TbSpecificationOptionExample.Criteria criteria = example.createCriteria();
+				criteria.andSpecIdEqualTo(new Long((Integer) map.get("id")));
+				List<TbSpecificationOption> options = specificationOptionMapper.selectByExample(example);
+				map.put("options", options);
+			}
 			return list;
 		}
-	
 }

@@ -18,7 +18,7 @@ import entity.Result;
  */
 @RestController
 @RequestMapping("/typeTemplate")
-public class TypeTemplateController {
+public class  TypeTemplateController {
 
 	@Reference
 	private TypeTemplateService typeTemplateService;
@@ -118,6 +118,7 @@ public class TypeTemplateController {
 	 */
 	@RequestMapping("/findSpecList")
 	public List<Map> findSpecList(long id){
+
 		return typeTemplateService.findSpecList(id);
 	}
 }

@@ -281,5 +281,8 @@
 		<module>andy-sellergoods-service</module>
 		<module>andy-manager-web</module>
 		<module>andy-shop-web</module>
-	</modules>
+        <module>andy-content-interface</module>
+		<module>andy-content-service</module>
+        <module>andy-portal-web</module>
+    </modules>
 </project>

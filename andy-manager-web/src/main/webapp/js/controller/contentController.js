@@ -110,5 +110,5 @@ app.controller('contentController' ,function($scope,$controller,contentService,u
 	// 	);
 	// }
 
-
+	$scope.statuss=['无效','有效'];//状态
 });	
